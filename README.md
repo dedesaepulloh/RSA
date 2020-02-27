@@ -1,2 +1,4 @@
 # RSA
-Program encrypts and decrypts messages using RSA.
+Program encrypts and decrypts messages using RSA encyption. A user must enter their public key (e, n), where n is the product of two prime numbers p and q, and e is a number between 1 and n such that the greatest common factor of e and (p-1)(q-1) is 1 (meaning that e is relatively prime to Euler's Tuotient of n). If the public key entered is not valid, the user will be prompted to re-enter a valid public key. 
+Upon entering a valid public key, the user will then be prompted to enter whether they want to encrypt or decrypt a message along with the name of the text file they want to encrypt or decrypt. Once this has been input, the program computes an integer d such that d is between 1 and n and de = 1(mod(p-1)(q-1)). With d computed, the program can either encrypt using C = M^d(mod n), where M is the value of the encrypted character, or decrypt with the equation M = C^d(mod n), where C is the character to encrypt. Note that when encrypting, each letter of the alphabet must be assigned a integer value, for example:
+A = 11, B = 23, C = 10, ... etc.
